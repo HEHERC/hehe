@@ -5,10 +5,10 @@ models = require('../../models/index')
 utils = require('../../lib/utils')
 async = require('async')
 moment = require('moment')
-_= require('../../lib/utils')._
+
 urls = require('../../config/url.json')
 appConfig = require('../../app_config')
-Q = require 'q'
+
 router.get '/news', (req, res) ->
   hot = req.query.hot
   top = req.query.top
@@ -45,46 +45,35 @@ router.get '/news', (req, res) ->
 
 router.get '/news/:newsId', (req, res) ->
   newsId = req.params.newsId
-  #存储该用户已经读取的新闻id到hasWatched 将该新闻的读取状态存储在watched
-  hasWatched = []
-  watched='N'
-  Q.fcall( ->
-    models.atomEmpireUser.getUserFromToken(req.headers.authorization,true).then (user) ->
-      models.atomEmpireUserReadNews.getWatchedByUserId(user.id).then (results) ->
-        _.each results, (result) ->
-          hasWatched.push(result.getDataValue('news_id'))
-        ).then( ->
-          #判断id
-            _.each hasWatched,(hasWatchedId) ->
-              watched = 'Y' if hasWatchedId == newsId
-          ).then( ->
-              models.atomEmpireNews.find(newsId, {
-                attributes: ['id', 'title', 'body', 'image_id', 'link', 'top', 'deleted', 'create_time', 'update_time',]
-              }).then (news) ->
-                news.setDataValue('img', urls[appConfig.get('env')].imageUrl + news.getDataValue('image_id'))
-                # delete news.dataValues.image_id
-                news.setDataValue('top_img', urls[appConfig.get('env')].imageUrl + news.getDataValue('top_image_id'))
-                 # delete news.dataValues.top_image_id
-                if news.body.length > 100
-                  middle = news.body.substring(0, 100)
-                  news.body = middle
-                news.setDataValue('watched',watched)
-                res.status(200).send(news)
-                # 更新查看新闻次数
-                news.browser_times = news.getDataValue('browser_times') + 1
-                news.save
-                  silent: true
-            , (err) ->
-              res.status(500).send('获取失败')
-        )
+
+  models.atomEmpireNews.find(newsId, {
+    attributes: ['id', 'title', 'body', 'image_id', 'link', 'top', 'deleted', 'create_time', 'update_time']
+  }).then (news) ->
+    news.setDataValue('img', urls[appConfig.get('env')].imageUrl + news.getDataValue('image_id'))
+    # delete news.dataValues.image_id
+
+    news.setDataValue('top_img', urls[appConfig.get('env')].imageUrl + news.getDataValue('top_image_id'))
+    # delete news.dataValues.top_image_id
+
+    if news.body.length > 100
+      middle = news.body.substring(0, 100)
+      news.body = middle
+    res.status(200).send(news)
+
+    # 更新查看新闻次数
+    news.browser_times = news.getDataValue('browser_times') + 1
+    news.save
+      silent: true
+  , (err) ->
+    res.status(500).send('获取失败')
 
 #获取简要新闻
 router.get '/newsbrief', (req, res) ->
   models.atomEmpireNews.findAll({
-      attributes: ['id', 'title', 'create_time', 'update_time']
-      order: 'create_time DESC'
-    }).then (news) ->
-      res.status(200).send(news)
+    attributes: ['id', 'title', 'create_time', 'update_time']
+    order: 'create_time DESC'
+  }).then (news) ->
+    res.status(200).send(news)
   , (err) ->
     res.status(500).send('获取简要新闻失败')
 
