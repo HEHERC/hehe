@@ -1,0 +1,11 @@
+#!/usr/bin/env coffee
+debug = require('debug')('atomNodeAPI')
+app = require('../app.coffee')
+
+app.set('port', process.env.PORT || 3000)
+app.set('env', process.env.ENV || 'development')
+
+console.log app.get('env')
+
+server = app.listen app.get('port'), () ->
+  debug('Express server listening on port ' + server.address().port)

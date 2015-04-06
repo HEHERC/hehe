@@ -1,0 +1,192 @@
+{
+  "atom": {
+    "development": {
+      "username": "root",
+      "password": "admindev",
+      "host": "192.168.1.229",
+      "dialect": "mysql",
+      "port": 3306,
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    },
+    "production": {
+      "username": "root",
+      "password": "Np1fQt&BSCzq!EI",
+      "host": "123.56.94.138",
+      "dialect": "mysql",
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    },
+    "backup": {
+      "username": "root",
+      "password": "Np1fQt&BSCzq!EI",
+      "host": "115.159.3.48",
+      "dialect": "mysql",
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    }
+  },
+  "nc": {
+    "development": {
+      "username": "root",
+      "password": "admindev",
+      "host": "192.168.1.229",
+      "dialect": "mysql",
+      "port": 3306,
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    },
+    "production": {
+      "username": "root",
+      "password": "TWU2SAOgK%Wkhgx",
+      "host": "10.173.1.31",
+      "dialect": "mysql",
+      "define": {
+        "timestamps": false,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    },
+    "backup": {
+      "username": "root",
+      "password": "Np1fQt&BSCzq!EI",
+      "host": "115.159.3.48",
+      "dialect": "mysql",
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    }
+  },
+  "stat": {
+    "development": {
+      "username": "root",
+      "password": "vVAcgs#tg6aZ",
+      "host": "192.168.1.217",
+      "dialect": "mysql",
+      "port": 3306
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "root",
+      "password": "vVAcgs#tg6aZ",
+      "host": "192.168.1.217",
+      "dialect": "mysql",
+      "port": 3306
+    },
+    "backup": {
+      "username": "root",
+      "password": "Np1fQt&BSCzq!EI",
+      "host": "115.159.3.48",
+      "dialect": "mysql",
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    }
+  },
+  "event": {
+    "development": {
+      "username": "root",
+      "password": "vVAcgs#tg6aZ",
+      "host": "192.168.1.217",
+      "dialect": "mysql",
+      "port": 3306
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "root",
+      "password": "TWU2SAOgK%Wkhgx",
+      "host": "123.56.94.138",
+      "dialect": "mysql",
+      "port": 3307
+    },
+    "backup": {
+      "username": "root",
+      "password": "Np1fQt&BSCzq!EI",
+      "host": "115.159.3.48",
+      "dialect": "mysql",
+      "define": {
+        "timestamps": true,
+        "createdAt": "create_time",
+        "updatedAt": "update_time",
+        "deletedAt": "delete_time",
+        "paranoid": true,
+        "underscored": true
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+	"development": {
+		"authority": "http://192.168.1.252:5555",
+    "imageUrl": "http://dev-mrwind.qiniudn.com/"
+	},
+	"production": {
+		"authority": "http://123.57.74.248:5555",
+    "imageUrl": "http://mrwind.qiniudn.com/"
+	},
+	"backup": {
+		"authority": "http://123.57.74.248:5555",
+    "imageUrl": "http://mrwind.qiniudn.com/"
+	},
+	"test": {
+		"authority": "http://192.168.1.252:5555",
+    "imageUrl": "http://dev-mrwind.qiniudn.com/"
+	}
+}

@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+var debug = require('debug')('testConnect');
+var Sequelize = require('sequelize');
+var dbConnection = "mysql://root:admindev@192.168.1.212:3306/mall";
+var connection = new Sequelize(dbConnection);
+testConnect(connection);
+function testConnect (sequelize){
+  sequelize.authenticate()
+  .complete(function () {
+    debug('success');
+  }, function () {
+    debug('fail');
+  })
+};

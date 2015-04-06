@@ -1,0 +1,14 @@
+#!/usr/bin/env coffee
+db = require('../models/index')
+config = require('../config/config.json')
+path = require('path')
+Sequelize = require('sequelize')
+
+for sequelize in db.sequelizes
+  sequelize.sync()
+
+# db.sequelizes[0].sync()
+
+# sequelize = new Sequelize 'empire', 'root', null, config.nc.test
+# sequelize['import'](path.join(__dirname, '..', 'models/nc/empire/user.coffee'))
+# sequelize.sync()

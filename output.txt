@@ -1,0 +1,50 @@
+Executing (default): SELECT `news_id` FROM `user_read_news` AS `UserReadNews` WHERE (`UserReadNews`.`delete_time` IS NULL AND `UserReadNews`.`user_id` = 217) LIMIT 1;
+::ffff:127.0.0.1 - - [Fri, 27 Mar 2015 09:23:20 GMT] "GET /nc/news/2 HTTP/1.1" - - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36"
+Executing (default): SELECT `news_id` FROM `user_read_news` AS `UserReadNews` WHERE (`UserReadNews`.`delete_time` IS NULL AND `UserReadNews`.`user_id` = 217) LIMIT 1;
+::ffff:127.0.0.1 - - [Fri, 27 Mar 2015 09:25:22 GMT] "GET /nc/news/2 HTTP/1.1" - - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36"
+Executing (default): SELECT `news_id` FROM `user_read_news` AS `UserReadNews` WHERE (`UserReadNews`.`delete_time` IS NULL AND `UserReadNews`.`user_id` = 217) LIMIT 1;
+{ dataValues: { news_id: 3 },
+  _previousDataValues: { news_id: 3 },
+  __options: 
+   { timestamps: true,
+     createdAt: 'create_time',
+     updatedAt: 'update_time',
+     deletedAt: 'delete_time',
+     instanceMethods: {},
+     classMethods: { getWatchedByUserId: [Function] },
+     validate: {},
+     freezeTableName: false,
+     underscored: true,
+     underscoredAll: false,
+     paranoid: true,
+     whereCollection: { user_id: 217 },
+     schema: null,
+     schemaDelimiter: '',
+     defaultScope: null,
+     scopes: null,
+     hooks: {},
+     name: { plural: 'UserReadNews', singular: 'UserReadNew' },
+     indexes: [],
+     tableName: 'user_read_news',
+     omitNull: false,
+     sequelize: 
+      { options: [Object],
+        config: [Object],
+        dialect: [Object],
+        models: [Object],
+        daoFactoryManager: [Object],
+        modelManager: [Object],
+        connectionManager: [Object],
+        importCache: [Object],
+        test: [Object],
+        queryInterface: [Object] },
+     uniqueKeys: {},
+     hasPrimaryKeys: true },
+  options: 
+   { isNewRecord: false,
+     isDirty: false,
+     raw: true,
+     attributes: [ 'news_id' ] },
+  hasPrimaryKeys: true,
+  __eagerlyLoadedAssociations: [],
+  isNewRecord: false }

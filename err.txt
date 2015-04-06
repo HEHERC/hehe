@@ -1,0 +1,28 @@
+Possibly unhandled SequelizeDatabaseError: ER_BAD_FIELD_ERROR: Unknown column 'UserReadNews.delete_time' in 'where clause'
+  at [object Object].module.exports.Query.formatError (/home/renchen/Desktop/dev/file_create/management/node_modules/sequelize/lib/dialects/mysql/query.js:160:16)
+  at Query._callback (/home/renchen/Desktop/dev/file_create/management/node_modules/sequelize/lib/dialects/mysql/query.js:38:23)
+  at Query.Sequence.end (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/sequences/Sequence.js:96:24)
+  at Query.ErrorPacket (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/sequences/Query.js:94:8)
+  at Protocol._parsePacket (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/Protocol.js:271:23)
+  at Parser.write (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/Parser.js:77:12)
+  at Protocol.write (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+  at Socket.<anonymous> (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/Connection.js:82:28)
+  at Socket.emit (events.js:107:17)
+  at readableAddChunk (_stream_readable.js:163:16)
+  at Socket.Readable.push (_stream_readable.js:126:10)
+  at TCP.onread (net.js:529:20)
+
+Possibly unhandled SequelizeDatabaseError: ER_BAD_FIELD_ERROR: Unknown column 'UserReadNews.delete_time' in 'where clause'
+  at [object Object].module.exports.Query.formatError (/home/renchen/Desktop/dev/file_create/management/node_modules/sequelize/lib/dialects/mysql/query.js:160:16)
+  at Query._callback (/home/renchen/Desktop/dev/file_create/management/node_modules/sequelize/lib/dialects/mysql/query.js:38:23)
+  at Query.Sequence.end (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/sequences/Sequence.js:96:24)
+  at Query.ErrorPacket (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/sequences/Query.js:94:8)
+  at Protocol._parsePacket (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/Protocol.js:271:23)
+  at Parser.write (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/Parser.js:77:12)
+  at Protocol.write (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+  at Socket.<anonymous> (/home/renchen/Desktop/dev/file_create/management/node_modules/mysql/lib/Connection.js:82:28)
+  at Socket.emit (events.js:107:17)
+  at readableAddChunk (_stream_readable.js:163:16)
+  at Socket.Readable.push (_stream_readable.js:126:10)
+  at TCP.onread (net.js:529:20)
+
